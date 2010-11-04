@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	<servlet>
+		<servlet-name>Main</servlet-name>
+		<servlet-class>chant.MainServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Main</servlet-name>
+		<url-pattern>/main</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ClientCred</servlet-name>
+		<servlet-class>chant.ClientCredServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ClientCred</servlet-name>
+		<url-pattern>/clientcred</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Logger</servlet-name>
+		<servlet-class>chant.LogServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logger</servlet-name>
+		<url-pattern>/logger</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Response</servlet-name>
+		<servlet-class>chant.ResponseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Response</servlet-name>
+		<url-pattern>/response</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>xmppreceiver</servlet-name>
+    	<servlet-class>chant.XmpptestServlet</servlet-class>
+  	</servlet>
+  
+  	<servlet-mapping>
+    	<servlet-name>xmppreceiver</servlet-name>
+    	<url-pattern>/speak</url-pattern>
+  	</servlet-mapping>
+  	
+  	  	<servlet-mapping>
+    	<servlet-name>xmppreceiver</servlet-name>
+    	<url-pattern>/_ah/xmpp/message/chat/</url-pattern>
+  	</servlet-mapping>
+	<!--   -->
+</web-app>
